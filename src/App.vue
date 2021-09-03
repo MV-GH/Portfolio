@@ -20,7 +20,7 @@ export default class App extends Vue {}
 
 <style lang="scss">
   body {
-    background-image: $base-gradient2;
+    background-image: $base-gradient3;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Montserrat", sans-serif;
