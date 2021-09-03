@@ -1,9 +1,14 @@
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     entry: './src/main.ts',
+    devtool: 'inline-source-map',
+    mode: "development",
+    watch: true,
     module: {
         rules: [
             {
@@ -18,8 +23,21 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/i,
-                use: ["css-loader"],
+                test: /\.scss$/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader',
+                    {
+                        loader: "sass-loader",
+                        options:{
+                            additionalData: `@import "./assets/styles/_vars.scss";`
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader','css-loader']
             }
         ],
     },
@@ -31,12 +49,20 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+        new webpack.DefinePlugin({
+            __VUE_OPTIONS_API__: false,
+            __VUE_PROD_DEVTOOLS__: false,
+        }),
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
             title: "Portfolio",
             template: path.resolve(__dirname, 'public', "index.html")
+        }),
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: "[name].css",
+            chunkFilename: "[id].css"
         })
-    ],
-    devtool: 'inline-source-map',
-    mode: "development"
+    ]
 };
