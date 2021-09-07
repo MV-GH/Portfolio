@@ -4,25 +4,37 @@
   </header>
   <main>
     <aside><nav><p>nav</p></nav></aside>
-    <article><p>Main</p></article>
+    <article>
+      <h2>Projects</h2>
+      <ProjectList :projects="projectRefs"/>
+    </article>
     <div><p>t</p></div>
   </main>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
+import ProjectList from "./components/ProjectList.vue";
+import _Projects from "./assets/data/projects.json"
+import ProjectType from "./Types/Project"
+import {defineComponent, ref} from "vue";
 
-@Options({
-  components: {  },
+const projects = _Projects as ProjectType[]
+
+export default defineComponent({
+  name: "App",
+  components: { ProjectList },
+  setup(){
+    const projectRefs = ref<ProjectType[]>(projects);
+    return {
+      projectRefs
+    }
+  }
 })
-export default class App extends Vue {}
 </script>
 
 <style lang="scss">
   body {
-    background-image: $base-gradient3;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: linear-gradient(to right, #38438b, #944b94, #d75a88, #ff7e71, #ffb25f, #ffeb68);
     font-family: "Montserrat", sans-serif;
     color: whitesmoke;
   }

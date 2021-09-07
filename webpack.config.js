@@ -30,7 +30,7 @@ module.exports = {
                     {
                         loader: "sass-loader",
                         options:{
-                            additionalData: `@import "./assets/styles/_vars.scss";`
+                            additionalData: `@import "/src/assets/styles/_vars.scss";`
                         }
                     }
                 ]
@@ -38,7 +38,11 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader','css-loader']
-            }
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
         ],
     },
     resolve: {
@@ -47,6 +51,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        clean: true
     },
     plugins: [
         new webpack.DefinePlugin({
