@@ -42,7 +42,7 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
-            },
+            }
         ],
     },
     resolve: {
@@ -53,10 +53,13 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         clean: true
     },
+    devServer: {
+        static: './dist',
+    },
     plugins: [
         new webpack.DefinePlugin({
             __VUE_OPTIONS_API__: false,
-            __VUE_PROD_DEVTOOLS__: false,
+            __VUE_PROD_DEVTOOLS__: true,
         }),
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
