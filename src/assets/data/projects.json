@@ -18,5 +18,25 @@
         "Type": "Video"
       }
     ]
+  },
+  {
+    "Title": "Title of the project 2",
+    "From": "2020",
+    "Until": "2021",
+    "Description": "This is project l.. bllaha habhlhalh hblhalbh lahbhlahblahblahb lorems ipsum",
+    "Tags": ["TS", "JS" , "Vue"],
+    "Source": "https://github.com",
+    "Installation": "",
+    "View": "",
+    "Assets": [
+      {
+        "Name": "example.jpg",
+        "Type": "Image"
+      },
+      {
+        "Name": "example.mp4",
+        "Type": "Video"
+      }
+    ]
   }
 ]

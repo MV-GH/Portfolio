@@ -1,11 +1,13 @@
 <template>
-  <VerticalArrow />
-  <div class="projects">
-    <Project
-        v-for="project in projects"
-        :project="project"
-        :key="project.Title"
-    />
+  <div id="histogram">
+    <VerticalArrow/>
+    <div class="projects">
+      <Project
+          v-for="project in projects"
+          :project="project"
+          :key="project.Title"
+      />
+    </div>
   </div>
 </template>
 
@@ -13,7 +15,7 @@
 import VerticalArrow from "./VerticalArrow.vue"
 import Project from "./Project.vue"
 import ProjectType from "../types/Project"
-import { defineComponent, PropType } from 'vue'
+import {defineComponent, PropType} from 'vue'
 
 export default defineComponent({
   name: "ProjectList",
@@ -32,8 +34,14 @@ export default defineComponent({
 </script>
 
 <style scoped>
-  .projects {
-    width: available;
-
-  }
+#histogram {
+  display: flex;
+  flex-direction: row;
+}
+.projects {
+  width: calc(100% - 40px);
+  margin-left: 5px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 </style>

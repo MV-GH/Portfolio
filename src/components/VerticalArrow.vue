@@ -11,21 +11,23 @@
   display: flex;
   flex-direction: column;
   width: 40px;
-  height: 100%;
 
   header {
     background-image: url("/src/assets/images/arrowhead.jpg");
-    image-orientation: flip;
+    transform: rotate(180deg);
     background-size: 40px;
     background-repeat: no-repeat;
     width: inherit;
     height: 40px;
+    background-color: transparent;
   }
   main {
-    border-left: black solid 1px;
-    border-right: black solid 1px;
+    border-left: black solid 2px;
+    border-right: black solid 2px;
     width: inherit;
+    box-sizing: border-box;
     height: calc(100% - 80px);
+    background-color: whitesmoke;
   }
   footer{
     background-image: url("/src/assets/images/arrowhead.jpg");
