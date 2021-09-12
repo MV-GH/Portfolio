@@ -10,12 +10,16 @@
     "View": "",
     "Assets": [
       {
-        "Name": "example.jpg",
+        "Name": "myLitCat.jpg",
         "Type": "Image"
       },
       {
-        "Name": "example.mp4",
+        "Name": "smolbebecat.gif",
         "Type": "Video"
+      },
+      {
+        "Name": "dank_cat_verd_.jpg",
+        "Type": "Image"
       }
     ]
   },

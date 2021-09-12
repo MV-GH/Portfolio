@@ -1,4 +1,4 @@
-interface Asset {
+export interface Asset {
     Name: string,
     Type: "Image" | "Video"
 }

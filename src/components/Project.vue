@@ -5,7 +5,9 @@
       <h3> {{ project.Title }} </h3>
     </header>
     <main>
-      <aside></aside>
+      <aside>
+        <AssetViewer  />
+      </aside>
       <article>
         <p>{{ project.Description }}</p>
       </article>
@@ -19,9 +21,11 @@
 <script lang="ts">
 import ProjectType from "../types/Project"
 import {defineComponent, PropType} from 'vue'
+import AssetViewer from "./AssetViewer.vue";
 
 export default defineComponent({
   name: "Portfolio",
+  components: {AssetViewer},
   props: {
     project: {
       required: true,
@@ -50,9 +54,19 @@ header {
 main {
   border-bottom: whitesmoke solid 1px;
   border-top: whitesmoke solid 1px;
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
   aside {
+    grid-area: 1 / 1 / 2 / 2;
+    padding: 5px;
     border-right: whitesmoke solid 1px;
+  }
+  article {
+    padding: 5px;
+    grid-area: 1 / 2 / 2 / 3;
   }
 }
 
