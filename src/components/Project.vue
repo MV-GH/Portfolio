@@ -6,7 +6,7 @@
     </header>
     <main>
       <aside>
-        <AssetViewer  />
+        <AssetViewer :assets="project.Assets"  />
       </aside>
       <article>
         <p>{{ project.Description }}</p>
@@ -55,14 +55,16 @@ main {
   border-bottom: whitesmoke solid 1px;
   border-top: whitesmoke solid 1px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 0;
   grid-row-gap: 0;
+
   aside {
     grid-area: 1 / 1 / 2 / 2;
     padding: 5px;
     border-right: whitesmoke solid 1px;
+    overflow: hidden;
   }
   article {
     padding: 5px;
