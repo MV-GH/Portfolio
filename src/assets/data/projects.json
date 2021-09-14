@@ -14,7 +14,7 @@
         "Type": "Image"
       },
       {
-        "Name": "smolbebecat.gif",
+        "Name": "Example module.mp4",
         "Type": "Video"
       },
       {
@@ -34,12 +34,8 @@
     "View": "",
     "Assets": [
       {
-        "Name": "example.jpg",
+        "Name": "myLitCat.jpg",
         "Type": "Image"
-      },
-      {
-        "Name": "example.mp4",
-        "Type": "Video"
       }
     ]
   }

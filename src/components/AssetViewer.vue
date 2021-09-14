@@ -1,9 +1,15 @@
 <template>
   <div class="swiper-container">
-    <swiper class="mySwiper">
+    <swiper
+        :modules="modules"
+        :navigation="true"
+        :pagination="{ clickable: true }"
+        :loop="shouldLoop"
+        class="mySwiper">
       <swiper-slide v-for="asset in assets">
-        <img v-if="asset.Type === 'Image'" :src="'../assets/data/projectAssets/' + asset.Name"  :alt="asset.Name"/>
-        <video v-if="asset.Type === 'Video'" :src="'../assets/data/projectAssets/' + asset.Name"></video>
+        <img v-if="asset.Type === 'Image'" :src="require('../assets/data/projectAssets/' + asset.Name)"
+             :alt="asset.Name"/>
+        <video v-if="asset.Type === 'Video'" :src="require('../assets/data/projectAssets/' + asset.Name)" controls></video>
       </swiper-slide>
     </swiper>
   </div>
@@ -11,20 +17,26 @@
 </template>
 
 <script>
-// Import Swiper Vue.js components
 import {Swiper, SwiperSlide} from 'swiper/vue';
-
-// Import Swiper styles
 import 'swiper/css';
+import "swiper/css/navigation";
+import 'swiper/css/pagination';
 
+import SwiperCore, {Navigation, Pagination} from 'swiper';
 
 export default {
   components: {
     Swiper,
     SwiperSlide,
   },
-  data() {
-    return {};
+  setup(props) {
+    const test = props.assets.length > 1;
+    console.log("should loop ")
+    console.log(test)
+    return {
+      shouldLoop : test,
+      modules: [Pagination, Navigation]
+    }
   },
   methods: {},
   props: {
@@ -41,38 +53,37 @@ export default {
 .swiper-container {
   width: inherit;
   height: 400px;
-}
 
-.mySwiper {
-  height: 400px;
+  overflow: hidden;
+  .swiper {
+    height: 400px;
+  }
+  .swiper-slide {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img, video {
+    width: 100%;
+  }
+
 }
 </style>
 
 <style>
-/*.swiper-slide {*/
-/*  text-align: center;*/
-/*  font-size: 18px;*/
-/*  background: #fff;*/
+.swiper-button-next, .swiper-button-prev {
+  color: whitesmoke;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
 
-/*  !* Center slide text vertically *!*/
-/*  display: -webkit-box;*/
-/*  display: -ms-flexbox;*/
-/*  display: -webkit-flex;*/
-/*  display: flex;*/
-/*  -webkit-box-pack: center;*/
-/*  -ms-flex-pack: center;*/
-/*  -webkit-justify-content: center;*/
-/*  justify-content: center;*/
-/*  -webkit-box-align: center;*/
-/*  -ms-flex-align: center;*/
-/*  -webkit-align-items: center;*/
-/*  align-items: center;*/
-/*}*/
-
-/*.swiper-slide img {*/
-/*  display: block;*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*  object-fit: cover;*/
-/*}*/
+.swiper-pagination-bullet {
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: whitesmoke;
+  border: 1px black solid;
+}
 </style>

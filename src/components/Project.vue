@@ -62,7 +62,8 @@ main {
 
   aside {
     grid-area: 1 / 1 / 2 / 2;
-    padding: 5px;
+    margin: 5px;
+    padding-right: 5px;
     border-right: whitesmoke solid 1px;
     overflow: hidden;
   }
