@@ -16,36 +16,33 @@
 
 </template>
 
-<script>
+<script lang="ts">
 import {Swiper, SwiperSlide} from 'swiper/vue';
 import 'swiper/css';
 import "swiper/css/navigation";
 import 'swiper/css/pagination';
+import {Navigation, Pagination} from 'swiper';
+import {defineComponent, PropType} from "vue";
+import {Asset} from "../types/Project";
 
-import SwiperCore, {Navigation, Pagination} from 'swiper';
-
-export default {
+export default defineComponent( {
   components: {
     Swiper,
     SwiperSlide,
   },
   setup(props) {
-    const test = props.assets.length > 1;
-    console.log("should loop ")
-    console.log(test)
     return {
-      shouldLoop : test,
+      shouldLoop : props.assets.length > 1,
       modules: [Pagination, Navigation]
     }
   },
-  methods: {},
   props: {
     assets: {
       required: true,
-      type: Array
+      type: Array as PropType<Asset[]>
     }
   }
-}
+})
 </script>
 
 <style scoped lang="scss">
