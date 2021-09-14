@@ -3,6 +3,7 @@
     <header>
       <p> {{ project.From }} - {{ project.Until }} </p>
       <h3> {{ project.Title }} </h3>
+      <p class="hidden"> {{ project.From }} - {{ project.Until }} </p>
     </header>
     <main>
       <aside>
@@ -40,14 +41,16 @@ export default defineComponent({
 header {
   display: flex;
   align-items: baseline;
-
-  h3 {
-    margin-left: 10px;
-    margin-bottom: 6px;
-  }
-
   p {
     margin-bottom: 5px;
+  }
+  h3 {
+    margin: 0 auto 6px;
+    font-size: 2.2rem;
+    font-family: "Acme", sans-serif;
+  }
+  .hidden {
+    visibility: hidden;
   }
 }
 

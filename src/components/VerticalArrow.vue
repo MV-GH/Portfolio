@@ -1,8 +1,8 @@
 <template>
   <div class="Arrow">
-    <header></header>
+    <header>≫</header>
     <main></main>
-    <footer></footer>
+    <footer>≫</footer>
   </div>
 </template>
 
@@ -12,29 +12,30 @@
   flex-direction: column;
   width: 40px;
 
+
   header {
-    background-image: url("/src/assets/images/arrowhead.jpg");
-    transform: rotate(180deg);
-    background-size: 40px;
-    background-repeat: no-repeat;
-    width: inherit;
+    color: whitesmoke;
+    //text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    width: 30px;
     height: 40px;
-    background-color: transparent;
+    font-size: 40px;
+
+    transform: rotate(270deg);
+
   }
   main {
-    border-left: black solid 2px;
-    border-right: black solid 2px;
-    width: inherit;
+    margin: 0 auto;
+    border-left: whitesmoke solid 2px;
+    border-right: whitesmoke solid 2px;
+    width: 50%;
     box-sizing: border-box;
     height: calc(100% - 80px);
-    background-color: whitesmoke;
+    background-color: transparent;
   }
   footer{
-    background-image: url("/src/assets/images/arrowhead.jpg");
-    background-size: 40px;
-    background-repeat: no-repeat;
-    width: inherit;
-    height: 40px;
+    padding-right: 45px;
+    transform: rotate(90deg);
+    font-size: 40px;
   }
 }
 </style>
