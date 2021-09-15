@@ -69,7 +69,8 @@ export default defineComponent({
 
 <style lang="scss">
 body {
-  background-image: linear-gradient(to right, #38438b, #944b94, #d75a88, #ff7e71, #ffb25f, #ffeb68);
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
   font-family: "Montserrat", sans-serif;
   color: whitesmoke;
 }
@@ -98,6 +99,13 @@ main {
 
   div {
     flex-basis: 15%;
+  }
+}
+
+a {
+  color: whitesmoke;
+  &:visited {
+    color: lightblue;
   }
 }
 </style>
