@@ -3,9 +3,12 @@
     <h1>Portfolio</h1>
   </header>
   <main>
-    <aside><nav><p>nav</p></nav></aside>
-    <article>
-      <SubHeader :title="'Still in progress'" />
+    <aside>
+      <nav>
+      </nav>
+    </aside>
+    <section>
+      <SubHeader :title="'Still in progress'"/>
       <p>
         This site is still in progress, There is gonna be many changes.
         Such as:
@@ -16,15 +19,30 @@
         <li>Adding navigation</li>
         <li>General Refinements</li>
       </ul>
-      <SubHeader :title="'Projects'" />
+      <SubHeader :title="'Projects'"/>
       <ProjectList :projects="projectRefs"/>
-      <SubHeader :title="'Future projects'" />
+      <SubHeader :title="'Future projects'"/>
       <p>
-        After finishing this site and my open source lua projects (on my public account).
-        I'm planning to learn a low level programming language such as c++ or rust. And build a few projects with it.
+        After finishing this site and my open source Lua projects (on my public account).
+        I'm planning to learn a low level programming language such as C++ or Rust. And build a few projects with it.
       </p>
-    </article>
-    <div><p>t</p></div>
+
+    </section>
+    <div>
+      <SubHeader :title="'Links'"/>
+      <ul>
+        <li>
+          <a href="https://github.com/mv-gh">Private Github <br>(Contains all projects listed here)</a>
+        </li>
+        <li>
+          <a href="https://be.linkedin.com/in/maarten-v-664388220?trk=people-guest_people_search-card">LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://github.com/VerdommeMan">Public Github</a>
+        </li>
+        <li><a href="https://1drv.ms/f/s!ArZfP64sVKWibL0cwVJD5xArL10">CV</a></li>
+      </ul>
+    </div>
   </main>
 </template>
 
@@ -39,8 +57,8 @@ const projects = _Projects as ProjectType[]
 
 export default defineComponent({
   name: "App",
-  components: { ProjectList, SubHeader},
-  setup(){
+  components: {ProjectList, SubHeader},
+  setup() {
     const projectRefs = ref<ProjectType[]>(projects);
     return {
       projectRefs
@@ -50,31 +68,36 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-  body {
-    background-image: linear-gradient(to right, #38438b, #944b94, #d75a88, #ff7e71, #ffb25f, #ffeb68);
-    font-family: "Montserrat", sans-serif;
-    color: whitesmoke;
-  }
+body {
+  background-image: linear-gradient(to right, #38438b, #944b94, #d75a88, #ff7e71, #ffb25f, #ffeb68);
+  font-family: "Montserrat", sans-serif;
+  color: whitesmoke;
+}
 </style>
 
 <style scoped lang="scss">
-  header {
-    text-align: center;
-    h1{
-      font-size: 3rem;
-    }
+header {
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
   }
-  main{
-    display: flex;
-    flex-direction: row;
-    aside{
-      flex-basis: 15%;
-    }
-    article {
-      flex-basis: 70%;
-    }
-    div{
-      flex-basis: 15%;
-    }
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+
+  aside {
+    flex-basis: 15%;
   }
+
+  section {
+    flex-basis: 70%;
+  }
+
+  div {
+    flex-basis: 15%;
+  }
+}
 </style>

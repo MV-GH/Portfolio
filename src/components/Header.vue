@@ -22,6 +22,7 @@ export default defineComponent({
 $color: whitesmoke;
 h2 {
   text-align: center;
+  padding-top: 20px;
 }
 
 hr {
