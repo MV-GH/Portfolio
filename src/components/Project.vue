@@ -7,14 +7,14 @@
     </header>
     <main>
       <aside>
-        <AssetViewer :assets="project.Assets"  />
+        <AssetViewer :assets="project.Assets"/>
       </aside>
       <article>
         <p>{{ project.Description }}</p>
       </article>
     </main>
     <footer>
-      <p v-for="tag in project.Tags"> {{ tag }} </p>
+      <Tag v-for="tag in project.Tags" :type="tag"/>
     </footer>
   </div>
 </template>
@@ -23,10 +23,11 @@
 import ProjectType from "../types/Project"
 import {defineComponent, PropType} from 'vue'
 import AssetViewer from "./AssetViewer.vue";
+import Tag from "./Tag.vue";
 
 export default defineComponent({
   name: "Portfolio",
-  components: {AssetViewer},
+  components: {AssetViewer, Tag},
   props: {
     project: {
       required: true,
@@ -41,14 +42,17 @@ export default defineComponent({
 header {
   display: flex;
   align-items: baseline;
+
   p {
     margin-bottom: 5px;
   }
+
   h3 {
     margin: 0 auto 6px;
     font-size: 2.2rem;
     font-family: "Acme", sans-serif;
   }
+
   .hidden {
     visibility: hidden;
   }
@@ -70,20 +74,10 @@ main {
     border-right: whitesmoke solid 1px;
     overflow: hidden;
   }
+
   article {
     padding: 5px;
     grid-area: 1 / 2 / 2 / 3;
   }
-}
-
-footer p {
-  border-radius: 40%;
-  background: blue;
-  color: whitesmoke;
-  margin-right: 5px;
-  display: inline-block;
-  padding: 5px 10px;
-  box-sizing: border-box;
-  margin-top: 6px;
 }
 </style>
