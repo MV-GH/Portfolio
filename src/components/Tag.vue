@@ -40,10 +40,7 @@ export default defineComponent({
     }
   },
   setup(props) {
-    console.warn("test")
-    console.log(store.getColor(props.type))
     return {
-      type: props.type,
       color: store.getColor(props.type)
     }
   }

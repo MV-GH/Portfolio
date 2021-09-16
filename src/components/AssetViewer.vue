@@ -61,9 +61,14 @@ export default defineComponent( {
     justify-content: center;
     align-items: center;
   }
-
-  img, video {
+  video {
     width: 100%;
+  }
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
   }
 
 }

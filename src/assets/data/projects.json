@@ -1,42 +1,123 @@
 [
   {
-    "Title": "Title of the project",
-    "From": "2020",
-    "Until": "2021",
-    "Description": "This is project l.. bllaha habhlhalh hblhalbh lahbhlahblahblahb lorems ipsum",
-    "Tags": ["TS", "JS" , "Vue"],
-    "Source": "https://github.com",
-    "Installation": "",
+    "Title": "Portfolio",
+    "From": "2021 aug",
+    "Until": "now",
+    "Description": "A deep dive into modern web tooling: webpack, TS, Vue, SCSS. I needed a site to showcase all my projects. \n I wanted to learn the modern approach to web development.",
+    "Tags": [
+      "TS",
+      "JS",
+      "Vue",
+      "SCSS"
+    ],
+    "Source": "https://github.com/MV-GH/Portfolio",
     "View": "",
+    "Assets": [    ]
+  },
+  {
+    "Title": "Notes application",
+    "From": "2021",
+    "Until": "2021",
+    "Description": "I was tasked with creating an application which has two frontends and two backends. One frontend is an android app and the other is a progressive web app. We had to create the same backend in Node.js and in Laravel and they have to be interchangeable with the frontend. I decided to create an application where you can log your notes.",
+    "Tags": [
+      "Kotlin",
+      "Android",
+      "Node.js",
+      "Laravel",
+      "Progressive web app",
+      "MongoDB"
+    ],
+    "Source": "https://github.com/mv-gh/todo",
+    "View": "https://logs-e7c66.web.app/",
     "Assets": [
       {
-        "Name": "myLitCat.jpg",
+        "Name": "pic1.png",
         "Type": "Image"
       },
       {
-        "Name": "Example module.mp4",
-        "Type": "Video"
+        "Name": "pic2.png",
+        "Type": "Image"
       },
       {
-        "Name": "dank_cat_verd_.jpg",
+        "Name": "Screen1.jpg",
+        "Type": "Image"
+      },
+      {
+        "Name": "Screen2.jpg",
+        "Type": "Image"
+      },
+      {
+        "Name": "Screen3.jpg",
+        "Type": "Image"
+      },
+      {
+        "Name": "Screen4.jpg",
+        "Type": "Image"
+      },
+      {
+        "Name": "Screen5.jpg",
+        "Type": "Image"
+      },
+      {
+        "Name": "Screen6.jpg",
+        "Type": "Image"
+      },
+      {
+        "Name": "Screen7.jpg",
         "Type": "Image"
       }
     ]
   },
   {
-    "Title": "Title of the project 2",
+    "Title": "Mars project",
     "From": "2020",
-    "Until": "2021",
-    "Description": "This is project l.. bllaha habhlhalh hblhalbh lahbhlahblahblahb lorems ipsum",
-    "Tags": ["TS", "JS" , "Vue"],
-    "Source": "https://github.com",
+    "Until": "2020",
+    "Description": "A group project",
+    "Source": "https://github.com/mv-gh/todo",
     "Installation": "",
-    "View": "",
-    "Assets": [
-      {
-        "Name": "myLitCat.jpg",
-        "Type": "Image"
-      }
-    ]
+    "Tags": [
+      "Node.js",
+      "SCSS"
+    ],
+    "Assets": [    ]
+  },
+  {
+    "Title": "Alhambra",
+    "From": "2019",
+    "Until": "2020",
+    "Description": "We had a group project to recreate the game Alhambra into online web application with a Java Backend.",
+    "Installation": "",
+    "Tags": [
+      "Java",
+      "Vertx"
+    ],
+    "Source": "https://github.com/MV-Alhambra",
+    "Assets": [    ]
+  },
+  {
+    "Title": "CRUD Pokemon GO app",
+    "From": "2019",
+    "Until": "2019",
+    "Description": "A CRUD application made in PHP, This was part of larger web application for my GIP. But I am unable to showcase that due to it containing sensitive information about the company where I did internship.",
+    "Source": "https://github.com/mv-gh/todo",
+    "Installation": "",
+    "Tags": [
+      "PHP",
+      "MySQL"
+    ],
+    "Assets": [    ]
+  },
+  {
+    "Title": "Ping Pong",
+    "From": "2018 Juli",
+    "Until": "2018 Aug",
+    "Source": "https://github.com/mv-gh/todo",
+    "Description": "My first project, I decided to recreate the the game called Pong with 4 different gamemodes but I never end up finished it.",
+    "Installation": "",
+    "Tags": [
+      "Java",
+      "Swing"
+    ],
+    "Assets": [    ]
   }
 ]

@@ -18,6 +18,7 @@
         <li>Theme</li>
         <li>Adding navigation</li>
         <li>General Refinements</li>
+        <li>Installation guide</li>
       </ul>
       <SubHeader :title="'Projects'"/>
       <ProjectList :projects="projectRefs"/>
@@ -68,11 +69,19 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-body {
+html {
   background-color: #000000;
   background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
   font-family: "Montserrat", sans-serif;
   color: whitesmoke;
+}
+
+
+a {
+  color: whitesmoke;
+  &:visited {
+    color: lightblue;
+  }
 }
 </style>
 
@@ -99,13 +108,6 @@ main {
 
   div {
     flex-basis: 15%;
-  }
-}
-
-a {
-  color: whitesmoke;
-  &:visited {
-    color: lightblue;
   }
 }
 </style>

@@ -10,7 +10,16 @@
         <AssetViewer :assets="project.Assets"/>
       </aside>
       <article>
+       <!-- <SwitchToggle v-if="hasInstallation" /> -->
         <p>{{ project.Description }}</p>
+        <p>
+          <a :href="project.Source">Source</a>
+          {{hasInstallation ? "" : "|"}}
+          <a v-if="!hasInstallation" :href="project.View">View</a>
+        </p>
+
+
+
       </article>
     </main>
     <footer>
@@ -24,10 +33,16 @@ import ProjectType from "../types/Project"
 import {defineComponent, PropType} from 'vue'
 import AssetViewer from "./AssetViewer.vue";
 import Tag from "./Tag.vue";
+import SwitchToggle from "./SwitchToggle.vue";
 
 export default defineComponent({
   name: "Portfolio",
-  components: {AssetViewer, Tag},
+  components: {AssetViewer, Tag, SwitchToggle},
+  setup(props) {
+    return {
+      hasInstallation: props.project.Installation !== undefined
+    }
+  },
   props: {
     project: {
       required: true,

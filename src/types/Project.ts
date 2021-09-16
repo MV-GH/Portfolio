@@ -10,7 +10,7 @@ export default interface Project {
     Description: string,
     Tags : string[],
     Source: string,
-    View: string,
-    Installation: string,
+    View?: string ,
+    Installation?: string,
     Assets: Asset[]
 }
