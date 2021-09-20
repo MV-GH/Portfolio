@@ -7,9 +7,14 @@
         :loop="shouldLoop"
         class="mySwiper">
       <swiper-slide v-for="asset in assets">
-        <img v-if="asset.Type === 'Image'" :src="require('../assets/data/projectAssets/' + asset.Name)"
-             :alt="asset.Name"/>
-        <video v-if="asset.Type === 'Video'" :src="require('../assets/data/projectAssets/' + asset.Name)" controls></video>
+        <img v-if="asset.Type === 'Image'" :src="require('../assets/data/projectAssets/' + asset.URL)"
+             :alt="asset.URL"/>
+        <video v-if="asset.Type === 'Video'" :src="require('../assets/data/projectAssets/' + asset.URL)"
+               controls></video>
+        <iframe v-if="asset.Type === 'YT'" width="560" height="315" :src="asset.URL" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
       </swiper-slide>
     </swiper>
   </div>
@@ -25,14 +30,14 @@ import {Navigation, Pagination} from 'swiper';
 import {defineComponent, PropType} from "vue";
 import {Asset} from "../types/Project";
 
-export default defineComponent( {
+export default defineComponent({
   components: {
     Swiper,
     SwiperSlide,
   },
   setup(props) {
     return {
-      shouldLoop : props.assets.length > 1,
+      shouldLoop: props.assets.length > 1,
       modules: [Pagination, Navigation]
     }
   },
@@ -52,18 +57,22 @@ export default defineComponent( {
   height: 400px;
 
   overflow: hidden;
+
   .swiper {
     height: 400px;
   }
+
   .swiper-slide {
     height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   video {
     width: 100%;
   }
+
   img {
     height: 100%;
     object-fit: cover;
@@ -83,6 +92,7 @@ export default defineComponent( {
 .swiper-pagination-bullet {
   opacity: 0.5;
 }
+
 .swiper-pagination-bullet-active {
   opacity: 1;
   background-color: whitesmoke;

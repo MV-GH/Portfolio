@@ -12,7 +12,12 @@
     ],
     "Source": "https://github.com/MV-GH/Portfolio",
     "View": "",
-    "Assets": [    ]
+    "Assets": [
+      {
+        "URL": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "Type": "YT"
+      }
+    ]
   },
   {
     "Title": "Notes application",
@@ -31,39 +36,39 @@
     "View": "https://logs-e7c66.web.app/",
     "Assets": [
       {
-        "Name": "pic1.png",
+        "URL": "pic1.png",
         "Type": "Image"
       },
       {
-        "Name": "pic2.png",
+        "URL": "pic2.png",
         "Type": "Image"
       },
       {
-        "Name": "Screen1.jpg",
+        "URL": "Screen1.jpg",
         "Type": "Image"
       },
       {
-        "Name": "Screen2.jpg",
+        "URL": "Screen2.jpg",
         "Type": "Image"
       },
       {
-        "Name": "Screen3.jpg",
+        "URL": "Screen3.jpg",
         "Type": "Image"
       },
       {
-        "Name": "Screen4.jpg",
+        "URL": "Screen4.jpg",
         "Type": "Image"
       },
       {
-        "Name": "Screen5.jpg",
+        "URL": "Screen5.jpg",
         "Type": "Image"
       },
       {
-        "Name": "Screen6.jpg",
+        "URL": "Screen6.jpg",
         "Type": "Image"
       },
       {
-        "Name": "Screen7.jpg",
+        "URL": "Screen7.jpg",
         "Type": "Image"
       }
     ]
@@ -79,7 +84,7 @@
       "Node.js",
       "SCSS"
     ],
-    "Assets": [    ]
+    "Assets": []
   },
   {
     "Title": "Alhambra",
@@ -92,7 +97,7 @@
       "Vertx"
     ],
     "Source": "https://github.com/MV-Alhambra",
-    "Assets": [    ]
+    "Assets": []
   },
   {
     "Title": "CRUD Pokemon GO app",
@@ -105,7 +110,7 @@
       "PHP",
       "MySQL"
     ],
-    "Assets": [    ]
+    "Assets": []
   },
   {
     "Title": "Ping Pong",
@@ -118,6 +123,6 @@
       "Java",
       "Swing"
     ],
-    "Assets": [    ]
+    "Assets": []
   }
 ]

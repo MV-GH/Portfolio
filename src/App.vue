@@ -78,9 +78,9 @@ html {
 
 
 a {
-  color: whitesmoke;
+  color: lightblue;
   &:visited {
-    color: lightblue;
+    color: deepskyblue;
   }
 }
 </style>

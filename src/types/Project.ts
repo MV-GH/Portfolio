@@ -1,6 +1,6 @@
 export interface Asset {
-    Name: string,
-    Type: "Image" | "Video"
+    URL: string,
+    Type: "Image" | "Video" | "YT"
 }
 
 export default interface Project {
