@@ -8,7 +8,8 @@
       "TS",
       "JS",
       "Vue",
-      "SCSS"
+      "SCSS",
+      "Webpack"
     ],
     "Source": "https://github.com/MV-GH/Portfolio",
     "View": "",
@@ -32,7 +33,7 @@
       "Progressive web app",
       "MongoDB"
     ],
-    "Source": "https://github.com/mv-gh/todo",
+    "Source": "https://github.com/MV-Logger",
     "View": "https://logs-e7c66.web.app/",
     "Assets": [
       {
@@ -74,11 +75,21 @@
     ]
   },
   {
+    "Title": "Internationaal project 06",
+    "From": "2021 March",
+    "Until": "2021 March",
+    "Description": "todo",
+    "Source": "",
+    "Installation": "",
+    "Tags": ["Node.js", "SCSS"],
+    "Assets": []
+  },
+  {
     "Title": "Mars project",
     "From": "2020",
     "Until": "2020",
     "Description": "A group project",
-    "Source": "https://github.com/mv-gh/todo",
+    "Source": "https://github.com/MV-Mars-Project",
     "Installation": "",
     "Tags": [
       "Node.js",

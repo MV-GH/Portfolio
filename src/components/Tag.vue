@@ -49,7 +49,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 p {
-  border-radius: 40%;
+  border-radius: 10px;
   background: #342961;
   color: whitesmoke;
   margin-right: 5px;
