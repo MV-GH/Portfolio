@@ -3,7 +3,7 @@
     "Title": "Portfolio",
     "From": "2021 aug",
     "Until": "now",
-    "Description": "A deep dive into modern web tooling: webpack, TS, Vue, SCSS. I needed a site to showcase all my projects. \n I wanted to learn the modern approach to web development.",
+    "Description": "A deep dive into modern web tooling: Webpack, TS, Vue, SCSS. I needed a site to showcase all my projects. \n I wanted to learn the modern approach to web development.",
     "Tags": [
       "TS",
       "JS",
@@ -101,7 +101,7 @@
     "Title": "Alhambra",
     "From": "2019",
     "Until": "2020",
-    "Description": "We had a group project to recreate the game Alhambra into online web application with a Java Backend.",
+    "Description": "We had a group project to recreate the board game Alhambra into online web application with a Java Backend.",
     "Installation": "",
     "Tags": [
       "Java",
@@ -129,7 +129,7 @@
     "Until": "2018 Aug",
     "Source": "https://github.com/MV-GH/Pong-Ultimate",
     "Description": "My first project, I decided to recreate the the game called Pong with 4 different gamemodes but I never end up finished it.",
-    "Installation": "",
+    "Installation": "You must have java 8+ installed, then either download the jar from the release page and run it or execute the following commands which do that. \n\n wget https://github.com/MV-GH/Pong-Ultimate/releases/download/latest/Pong.Ultimate.jar \n java -jar Pong.Ultimate.jar",
     "Tags": [
       "Java",
       "Swing"
