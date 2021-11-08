@@ -1,28 +1,40 @@
 <template>
   <ul>
-    <li class="active" @click="counter++">Description</li>
-    <li v-on:click="flak()">Installation</li>
-    <li>{{ counter }}</li>
+    <li @click="switch1" class="specifity" v-bind:class="{ active: !flagSwitch }">Description</li>
+    <li @click="switch2" class="specifity" v-bind:class="{ active: flagSwitch }">Installation</li>
   </ul>
 </template>
 
 <script lang="ts">
-import {defineComponent, onMounted, reactive, ref} from "vue";
+import {defineComponent, ref} from "vue";
 
 export default defineComponent({
-  methods: {
-    flak(): void {
-
-      console.log("fired");
-      console.log();
-      console.warn("test");
+  emits: {
+    switchchange(payload: { val: boolean }) {
+      return true
     }
   },
-  setup: () => {
-    const counter = ref(0);
+  setup: (props, {emit}) => {
+    const flagSwitch = ref(false);
+
+    const switch1 = () => {
+      flagSwitch.value = false;
+      emit("switchchange", {
+        val: false
+      })
+    }
+
+    const switch2 = () => {
+      flagSwitch.value = true;
+      emit("switchchange", {
+        val: true
+      })
+    }
 
     return {
-     counter
+      switch1,
+      switch2,
+      flagSwitch
     }
   }
 });
@@ -33,6 +45,7 @@ export default defineComponent({
 ul {
   list-style: none;
   background: transparent;
+  text-align: center;
 
   li {
     padding: 0.25rem;
@@ -42,13 +55,13 @@ ul {
     cursor: pointer;
     font-weight: bold;
     font-size: 1.1rem;
+    user-select: none;
 
-
-    &.active {
-      background: white;
+    &.active.specifity { // gotta increase the order or else the classes below have higher specify thus overriding the border
+      background: whitesmoke;
       color: black;
+      border-color: whitesmoke;
       mix-blend-mode: screen;
-
     }
 
     &:first-child {

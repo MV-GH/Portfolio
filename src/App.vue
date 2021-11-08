@@ -24,7 +24,7 @@
       <ProjectList :projects="projectRefs"/>
       <SubHeader :title="'Future projects'"/>
       <p>
-        After finishing this site and my open source Lua projects (on my public account).
+        After finishing this site and my open source Lua projects (on my public GitHub account). <br>
         I'm planning to learn a low level programming language such as C++ or Rust. And build a few projects with it.
       </p>
 

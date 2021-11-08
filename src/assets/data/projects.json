@@ -129,7 +129,7 @@
     "Until": "2018 Aug",
     "Source": "https://github.com/MV-GH/Pong-Ultimate",
     "Description": "My first project, I decided to recreate the the game called Pong with 4 different gamemodes but I never end up finished it.",
-    "Installation": "You must have java 8+ installed, then either download the jar from the release page and run it or execute the following commands which do that. \n\n wget https://github.com/MV-GH/Pong-Ultimate/releases/download/latest/Pong.Ultimate.jar \n java -jar Pong.Ultimate.jar",
+    "Installation": "You must have java 8+ installed, then either download the jar from the release page and run it or execute the following commands which do that. <br> <br> wget https://github.com/MV-GH/Pong-Ultimate/releases/download/latest/Pong.Ultimate.jar <br> java -jar Pong.Ultimate.jar",
     "Tags": [
       "Java",
       "Swing"
