@@ -42,10 +42,8 @@ export default defineComponent({
     return {
       hasInstallation: props.project.Installation !== undefined,
       text,
-      working: (test: { val: boolean }) => {
-        console.log("changed switch")
-        console.log(test.val)
-        text.value = test.val ? props.project.Installation || "" : props.project.Description
+      working: (test: boolean) => {
+        text.value = test ? props.project.Installation || "" : props.project.Description
       }
     }
   },

@@ -27,7 +27,7 @@
         After finishing this site and my open source Lua projects (on my public GitHub account). <br>
         I'm planning to learn a low level programming language such as C++ or Rust. And build a few projects with it.
       </p>
-
+      <test></test>
     </section>
     <div>
       <SubHeader :title="'Links'"/>
@@ -53,12 +53,13 @@ import SubHeader from "./components/Header.vue";
 import _Projects from "./assets/data/projects.json"
 import ProjectType from "./Types/Project"
 import {defineComponent, ref} from "vue";
+import test from "./components/test.vue";
 
 const projects = _Projects as ProjectType[]
 
 export default defineComponent({
   name: "App",
-  components: {ProjectList, SubHeader},
+  components: {ProjectList, SubHeader, test},
   setup() {
     const projectRefs = ref<ProjectType[]>(projects);
     return {
@@ -79,6 +80,7 @@ html {
 
 a {
   color: lightblue;
+
   &:visited {
     color: deepskyblue;
   }

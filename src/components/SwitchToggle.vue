@@ -9,26 +9,18 @@
 import {defineComponent, ref} from "vue";
 
 export default defineComponent({
-  emits: {
-    switchchange(payload: { val: boolean }) {
-      return true
-    }
-  },
+
   setup: (props, {emit}) => {
     const flagSwitch = ref(false);
 
     const switch1 = () => {
       flagSwitch.value = false;
-      emit("switchchange", {
-        val: false
-      })
+      emit("switchchange", false)
     }
 
     const switch2 = () => {
       flagSwitch.value = true;
-      emit("switchchange", {
-        val: true
-      })
+      emit("switchchange", true)
     }
 
     return {
