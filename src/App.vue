@@ -53,13 +53,12 @@ import SubHeader from "./components/Header.vue";
 import _Projects from "./assets/data/projects.json"
 import ProjectType from "./Types/Project"
 import {defineComponent, ref} from "vue";
-import test from "./components/test.vue";
 
 const projects = _Projects as ProjectType[]
 
 export default defineComponent({
   name: "App",
-  components: {ProjectList, SubHeader, test},
+  components: {ProjectList, SubHeader},
   setup() {
     const projectRefs = ref<ProjectType[]>(projects);
     return {
