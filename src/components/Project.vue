@@ -13,7 +13,8 @@
         <SwitchToggle v-if="hasInstallation" @switchchange="working"/>
         <p v-html="text"></p>
         <p>
-          <a :href="project.Source">Source</a>
+
+          <a v-if="project.Source !== ''" :href="project.Source">Source</a>
           {{ hasInstallation ? "" : "|" }}
           <a v-if="!hasInstallation" :href="project.View">View</a>
         </p>
