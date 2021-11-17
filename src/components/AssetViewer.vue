@@ -7,7 +7,8 @@
         :loop="shouldLoop"
         class="mySwiper">
       <swiper-slide v-for="asset in assets">
-        <img v-if="asset.Type === 'Image'" :src="require('../assets/data/projectAssets/' + asset.URL)"
+        <img v-if="asset.Type === undefined || asset.Type === 'Image'"
+             :src="require('../assets/data/projectAssets/' + asset.URL)"
              :alt="asset.URL"/>
         <video v-if="asset.Type === 'Video'" :src="require('../assets/data/projectAssets/' + asset.URL)"
                controls></video>

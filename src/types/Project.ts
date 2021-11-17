@@ -1,6 +1,6 @@
 export interface Asset {
     URL: string,
-    Type: "Image" | "Video" | "YT"
+    Type?: "Image" | "Video" | "YT"
 }
 
 export default interface Project {
@@ -13,4 +13,8 @@ export default interface Project {
     View?: string ,
     Installation?: string,
     Assets: Asset[]
+}
+
+export interface ProjectList {
+    Projects: Project[]
 }

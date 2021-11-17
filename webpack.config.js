@@ -1,5 +1,5 @@
 const path = require('path');
-const { VueLoaderPlugin } = require('vue-loader')
+const {VueLoaderPlugin} = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -11,6 +11,11 @@ module.exports = {
     watch: true,
     module: {
         rules: [
+            {
+                type: 'json',
+                test: /\.ya?ml$/,
+                loader: 'yaml-loader'
+            },
             {
                 test: /\.vue$/,
                 loader: 'vue-loader'
@@ -29,7 +34,7 @@ module.exports = {
                     'css-loader',
                     {
                         loader: "sass-loader",
-                        options:{
+                        options: {
                             additionalData: `@import "/src/assets/styles/_vars.scss";`
                         }
                     }
@@ -37,7 +42,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader','css-loader']
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif|mp4)$/i,
