@@ -69,15 +69,15 @@ export default defineComponent({
     align-items: center;
   }
 
-  video {
-    width: 100%;
-  }
 
-  img {
-    height: 100%;
+  img, video {
+
     object-fit: cover;
     object-position: center;
-
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
   }
 
 }
