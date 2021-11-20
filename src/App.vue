@@ -50,13 +50,11 @@
 import ProjectList from "./components/ProjectList.vue";
 import SubHeader from "./components/Header.vue";
 import _Projects from "./assets/data/projectList.yaml";
-import {default as ProjectType, ProjectList as ProjectListType} from "./Types/Project";
+import {default as ProjectType, ProjectList as ProjectListType} from "./types/Project";
 import {defineComponent, ref} from "vue";
 
 
 const projects = _Projects as ProjectListType;
-
-console.log(JSON.stringify(projects));
 
 export default defineComponent({
   name: "App",
