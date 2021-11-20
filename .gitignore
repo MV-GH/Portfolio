@@ -1,6 +1,5 @@
 node_modules
 /dist
-src/assets/data/projectAssets/*
 
 # local env files
 .env.local
