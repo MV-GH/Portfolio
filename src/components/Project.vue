@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :id="'project-' + id">
     <header>
       <p> {{ project.From }} - {{ project.Until }} </p>
       <h3> {{ project.Title }} </h3>
@@ -37,13 +37,17 @@ import SwitchToggle from "./SwitchToggle.vue";
 import * as marked from "marked";
 import hljs from "highlight.js";
 
+let id = 0;
+
+
 function convertMDtoHtml(md: string) {
-  return marked.marked(md, {
+  const t: any = marked.marked(md, {
     langPrefix: 'hljs language-',
     highlight: function (md: string) {
       return hljs.highlightAuto(md).value
     }
-  })
+  });
+  return t
 }
 
 export default defineComponent({
@@ -51,13 +55,14 @@ export default defineComponent({
   components: {AssetViewer, Tag, SwitchToggle},
   setup(props) {
     const text = ref(props.project.Description);
-
+    id++;
     return {
       hasInstallation: props.project.Installation !== undefined,
       text,
       working: (test: boolean) => {
         text.value = test ? convertMDtoHtml(props.project.Installation || "") : props.project.Description
-      }
+      },
+      id
     }
   },
   props: {
@@ -115,6 +120,7 @@ main {
     padding: 5px;
     grid-area: 1 / 2 / 2 / 3;
     overflow: hidden;
+
     p:last-child {
       text-align: center;
     }

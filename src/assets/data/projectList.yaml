@@ -103,9 +103,10 @@ Projects:
       the release page and run it or execute the following commands which does that. <br>
 
       ```console
-      curl -o 'Pong.Ultimate.jar' 'https://github.com/MV-GH/Pong-Ultimate/releases/download/latest/Pong.Ultimate.jar'
+      curl -o 'Pong.Ultimate.jar' -L 'https://github.com/MV-GH/Pong-Ultimate/releases/download/latest/Pong.Ultimate.jar'
       java -jar 'Pong.Ultimate.jar'
       ```
+      *use curl.exe on windows*
     Tags:
       - Java
       - Swing
