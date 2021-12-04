@@ -34,17 +34,29 @@ import {defineComponent, PropType, ref} from 'vue'
 import AssetViewer from "./AssetViewer.vue";
 import Tag from "./Tag.vue";
 import SwitchToggle from "./SwitchToggle.vue";
+import * as marked from "marked";
+import hljs from "highlight.js";
+
+function convertMDtoHtml(md: string) {
+  return marked.marked(md, {
+    langPrefix: 'hljs language-',
+    highlight: function (md: string) {
+      return hljs.highlightAuto(md).value
+    }
+  })
+}
 
 export default defineComponent({
   name: "Portfolio",
   components: {AssetViewer, Tag, SwitchToggle},
   setup(props) {
     const text = ref(props.project.Description);
+
     return {
       hasInstallation: props.project.Installation !== undefined,
       text,
       working: (test: boolean) => {
-        text.value = test ? props.project.Installation || "" : props.project.Description
+        text.value = test ? convertMDtoHtml(props.project.Installation || "") : props.project.Description
       }
     }
   },
@@ -57,8 +69,12 @@ export default defineComponent({
 })
 
 </script>
-
+<style>
+@import "~highlight.js/styles/atom-one-dark.css";
+</style>
 <style scoped lang="scss">
+
+
 header {
   display: flex;
   align-items: baseline;
@@ -98,6 +114,10 @@ main {
   article {
     padding: 5px;
     grid-area: 1 / 2 / 2 / 3;
+    overflow: hidden;
+    p:last-child {
+      text-align: center;
+    }
   }
 }
 </style>
