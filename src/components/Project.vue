@@ -30,39 +30,29 @@
 
 <script lang="ts">
 import ProjectType from "../types/Project"
-import {defineComponent, PropType, ref} from 'vue'
+import {defineComponent, onUpdated, PropType, ref} from 'vue'
 import AssetViewer from "./AssetViewer.vue";
 import Tag from "./Tag.vue";
 import SwitchToggle from "./SwitchToggle.vue";
-import * as marked from "marked";
-import hljs from "highlight.js";
+import {addCopyButton, convertMDtoHtml} from "../helper";
 
 let id = 0;
 
-
-function convertMDtoHtml(md: string) {
-  const t: any = marked.marked(md, {
-    langPrefix: 'hljs language-',
-    highlight: function (md: string) {
-      return hljs.highlightAuto(md).value
-    }
-  });
-  return t
-}
 
 export default defineComponent({
   name: "Portfolio",
   components: {AssetViewer, Tag, SwitchToggle},
   setup(props) {
     const text = ref(props.project.Description);
-    id++;
+    const _id = ++id;
+    onUpdated(() => addCopyButton(_id));
     return {
       hasInstallation: props.project.Installation !== undefined,
       text,
       working: (test: boolean) => {
-        text.value = test ? convertMDtoHtml(props.project.Installation || "") : props.project.Description
+        text.value = test ? convertMDtoHtml(props.project.Installation || "") : props.project.Description;
       },
-      id
+      id: _id
     }
   },
   props: {
@@ -74,8 +64,77 @@ export default defineComponent({
 })
 
 </script>
-<style>
+<style lang="scss">
+// Add theme for highlight.js
 @import "~highlight.js/styles/atom-one-dark.css";
+
+// CSS for copy button
+pre {
+  position: relative;
+
+  .container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    animation: fade-out 200ms both;
+    display: none;
+
+    .copy {
+      position: relative;
+      color: #c9d1d9;
+      margin: 8px;
+      background-color: #21262d;
+      border-color: rgba(240, 246, 252, 0.1);
+      transition: .2s cubic-bezier(0.3, 0, 0.5, 1);
+      transition-property: color, background-color, border-color;
+
+      cursor: pointer;
+      border: 1px solid;
+      border-radius: 6px;
+      appearance: none;
+
+      i {
+        margin: 4px;
+        padding: 0;
+        width: 16px;
+        height: 16px;
+        color: #8b949e;
+      }
+    }
+
+    button.active {
+      border-color: #3fb950;
+
+      i {
+        font-size: 10px;
+        color: #3fb950;
+        line-height: 16px;
+      }
+    }
+
+    .copy:hover:not(.active) {
+      transition-duration: .1s;
+      background-color: #30363d;
+      border-color: #d6dce1;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: white;
+      border-color: white;
+    }
+
+  }
+
+  &:active .container,
+  &:focus .container,
+  &:hover .container {
+    display: block;
+    animation: fade-in 200ms both;
+  }
+}
 </style>
 <style scoped lang="scss">
 

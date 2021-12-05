@@ -64,7 +64,7 @@ Projects:
     Until: '2020'
     Description: A group project
     Source: https://github.com/MV-Mars-Project
-    Installation: ''
+    Installation: ""
     Tags:
       - Node.js
       - SCSS

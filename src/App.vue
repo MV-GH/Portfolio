@@ -18,7 +18,8 @@
         <li>Theme</li>
         <li>Adding navigation</li>
         <li>General Refinements</li>
-        <li>Installation guide</li>
+        <li>Installation guide <i class="far fa-clipboard"></i></li>
+
       </ul>
       <SubHeader :title="'Projects'"/>
       <ProjectList :projects="projectRefs"/>
@@ -69,6 +70,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@import url('~@fortawesome/fontawesome-free/css/all.min.css');
+
 html {
   background-color: #000000;
   background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
