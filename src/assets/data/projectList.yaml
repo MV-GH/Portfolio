@@ -80,24 +80,45 @@ Projects:
       - Vertx
     Source: https://github.com/MV-Alhambra
     Assets: []
-  - Title: CRUD Pokemon GO app
-    From: '2019'
-    Until: '2019'
+  - Title: 'CRUD webapp: Pokemon GO Together'
+    From: '2019 march'
+    Until: '2019 may'
     Description: A CRUD application made in PHP, This was part of larger web application
       for my GIP. But I am unable to showcase that due to it containing sensitive information
       about the company where I did internship.
-    Source: https://github.com/mv-gh/todo
-    Installation: ''
+    Source: https://github.com/MV-GH/pokemongotogether
+    Installation: |
+      This uses docker-compose for an easy installation, so only docker-compose and git is required.
+      
+      ```console
+      git clone "https://github.com/MV-GH/pokemongotogether.git"
+      cd pokemongotogether
+      docker-compose up -d
+      ```  
+        
+      Then surf to [http://localhost:8000](http://localhost:8000)
+      
+      Default normal user is `Tester` with as password `Test`
+      
+      Default Admin is `admin` with password `maartenGIP19`
+
     Tags:
       - PHP
       - MySQL
-    Assets: []
+    Assets:
+      - URL: pokvid.mp4
+        Type: Video
+      - URL: pok1.png
+      - URL: pok2.png
+      - URL: pok3.png
+      - URL: pok4.png
+      - URL: pok5.png
   - Title: Ping Pong
     From: 2018 Juli
     Until: 2018 Aug
     Source: https://github.com/MV-GH/Pong-Ultimate
     Description: My first project, I decided to recreate the the game called Pong with
-      4 different gamemodes but I never end up finished it.
+      4 different gamemodes but I never ended up finishing it.
     Installation: |
       You must have java 8+ installed, then either download the jar from
       the release page and run it or execute the following commands which does that. <br>
