@@ -14,9 +14,9 @@
         <p v-html="text"></p>
         <p>
 
-          <a v-if="project.Source !== ''" :href="project.Source">Source</a>
+          <a v-if="project.Source !== ''" :href="project.Source" target="_blank">Source</a>
           {{ hasInstallation ? "" : "|" }}
-          <a v-if="!hasInstallation" :href="project.View">View</a>
+          <a v-if="!hasInstallation" :href="project.View" target="_blank">View</a>
         </p>
 
 
