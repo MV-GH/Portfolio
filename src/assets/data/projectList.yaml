@@ -70,16 +70,33 @@ Projects:
       - SCSS
     Assets: []
   - Title: Alhambra
-    From: '2019'
-    Until: '2020'
+    From: '2020 march'
+    Until: '2020 may'
     Description: We had a group project to recreate the board game Alhambra into online
       web application with a Java Backend.
-    Installation: ''
+    Installation: |
+      The application exists out of an Java web api backend and simple webclient as frontend
+      It uses docker-compose for easy deployment.
+      
+      ```console
+      git clone https://github.com/MV-Alhambra/Server.git
+      cd Server
+      docker-compose up -d
+      ```
+      Then surf to [http://localhost:9875](http://localhost:9875)
+
     Tags:
       - Java
       - Vertx
     Source: https://github.com/MV-Alhambra
-    Assets: []
+    Assets:
+      - URL: alhambra4.png
+      - URL: https://www.youtube.com/embed/lDM5AQOnq-s
+        Type: YT
+      - URL: alhambra1.png
+      - URL: alhambra2.png
+      - URL: alhambra3.png
+
   - Title: 'CRUD webapp: Pokemon GO Together'
     From: '2019 march'
     Until: '2019 may'
