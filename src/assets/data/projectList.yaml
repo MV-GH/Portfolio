@@ -79,7 +79,7 @@ Projects:
       It uses docker-compose for easy deployment.
       
       ```console
-      git clone https://github.com/MV-Alhambra/Server.git
+      git clone "https://github.com/MV-Alhambra/Server.git"
       cd Server
       docker-compose up -d
       ```

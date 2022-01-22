@@ -107,11 +107,31 @@ main {
   }
 
   section {
+    overflow-x: hidden;
     flex-basis: 70%;
+    p {
+      padding: 5px;
+    }
   }
 
   div {
     flex-basis: 15%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    section {
+      flex-basis: 100%;
+    }
+    & > aside {
+      flex-basis: 0;
+      display: none;
+    }
+    & > div {
+      flex-basis: 0;
+      display: none;
+    }
   }
 }
 </style>

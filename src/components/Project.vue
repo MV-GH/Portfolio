@@ -1,9 +1,9 @@
 <template>
   <div :id="'project-' + id">
     <header>
-      <p> {{ project.From }} - {{ project.Until }} </p>
+
       <h3> {{ project.Title }} </h3>
-      <p class="hidden"> {{ project.From }} - {{ project.Until }} </p>
+
     </header>
     <main>
       <aside>
@@ -143,9 +143,9 @@ header {
   display: flex;
   align-items: baseline;
 
-  p {
-    margin-bottom: 5px;
-  }
+  //p {
+  //  margin-bottom: 5px;
+  //}
 
   h3 {
     margin: 0 auto 6px;
@@ -153,9 +153,9 @@ header {
     font-family: "Acme", sans-serif;
   }
 
-  .hidden {
-    visibility: hidden;
-  }
+  //.hidden {
+  //  visibility: hidden;
+  //}
 }
 
 main {
@@ -182,6 +182,52 @@ main {
 
     p:last-child {
       text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-right: 5px;
+    aside {
+      grid-area: 1 / 1 / 2 / 2;
+      border-bottom: whitesmoke solid 1px;
+      border-right: none;
+      padding-bottom: 5px;
+    }
+
+    article {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+  }
+  header {
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    p {
+      font-size: 0.9rem;
+      padding: 3px 5px;
+      margin-bottom: 6px;
+    }
+    padding-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: 0.9rem;
+  }
+  header {
+    h3 {
+      font-size: 1.4rem;
     }
   }
 }

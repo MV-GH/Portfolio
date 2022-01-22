@@ -38,6 +38,7 @@ ul {
   list-style: none;
   background: transparent;
   text-align: center;
+  padding-left: 0;
 
   li {
     padding: 0.25rem;
