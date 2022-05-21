@@ -13,9 +13,7 @@ Projects:
       - Webpack
     Source: https://github.com/MV-GH/Portfolio
     View: ''
-    Assets:
-      - URL: https://www.youtube.com/embed/dQw4w9WgXcQ
-        Type: YT
+    Assets: []
   - Title: Notes application
     From: '2021'
     Until: '2021'
