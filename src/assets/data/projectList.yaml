@@ -1,5 +1,39 @@
 ---
 Projects:
+  - Title: Jerboa
+    From: 2023 June
+    Until: Now
+    Description: I am a contributor and maintainer for the OpenSource app Jerboa. Which is an Android client for Lemmy, a federated reddit alternative
+    Tags:
+      - Kotlin
+      - Android
+      - Jetpack Compose
+      - SQLite
+    Source: https://github.com/dessalines/jerboa
+    View: ''
+    Assets: []
+  - Title: vscode DRAMA support
+    From: 2023 apr
+    Until: 2023 may
+    Description: VSCode extension that adds support for the DRAMA language (Decimale RekenAutomaat met Meerdere Accumulatoren) or (Decimal Calculator with Multiple Accumulators). At the moment it only does syntax highlighting and formatting.
+    Tags:
+      - Typescript
+      - Antlr
+    Source: https://github.com/MV-GH/vsc-drama-support
+    View: ''
+    Assets: []
+#     - URL: https://github.com/MV-GH/vsc-drama-support/blob/main/media/formatting-example.gif
+#     - URL: https://github.com/MV-GH/vsc-drama-support/blob/main/media/syntax-highlighting-example.gif
+
+  - Title: SimpleHackAssembler
+    From: 2022 apr
+    Until: 2022 may
+    Description: 'SimpleHackAssembler is a 16-bit machine language assembler for the 16-bit Hack Assembly Language written in Scala. This was done as part of building a complete 16-bit computer from the grounds up through the book, and MOOC, Elementes of Computing Systems, which is informally known as nand2tetris. Hack is also the name of the computer. It also features a basic error handler.'
+    Tags:
+      - Scala
+    Source: https://github.com/VerdommeMan/SimpleHackAssembler
+    View: ''
+    Assets: [ ]
   - Title: Portfolio
     From: 2021 aug
     Until: now
@@ -29,6 +63,7 @@ Projects:
       - Laravel
       - Progressive web app
       - MongoDB
+      - Bootstrap
     Source: https://github.com/MV-Logger
     View: https://logs-e7c66.web.app/
     Assets:
@@ -56,6 +91,7 @@ Projects:
     Tags:
       - Node.js
       - SCSS
+      - Bootstrap
     Assets: []
   - Title: Mars project
     From: '2020'

@@ -33,15 +33,15 @@
       <SubHeader :title="'Links'"/>
       <ul>
         <li>
-          <a href="https://github.com/mv-gh">Private Github <br>(Contains all projects listed here)</a>
+          <a href="https://github.com/mv-gh">Public Github <br>(Contains most projects listed here)</a>
         </li>
         <li>
           <a href="https://be.linkedin.com/in/maarten-v-664388220?trk=people-guest_people_search-card">LinkedIn</a>
         </li>
         <li>
-          <a href="https://github.com/VerdommeMan">Public Github</a>
+          <a href="https://github.com/VerdommeMan">Private Github</a>
         </li>
-        <li><a href="https://1drv.ms/f/s!ArZfP64sVKWibL0cwVJD5xArL10">CV</a></li>
+<!--        <li><a href="https://1drv.ms/f/s!ArZfP64sVKWibL0cwVJD5xArL10">CV</a></li>-->
       </ul>
     </div>
   </main>
